@@ -1,7 +1,7 @@
 import requests
-import headers
+import test_headers
 import data_answers
-from urls import get_orders
+from test_urls import get_orders
 import allure
 
 
@@ -10,7 +10,7 @@ class TestGetOrders:
     @allure.title('Получение заказов пользователя')
     @allure.step('В параметрах авторизовать пользователя')
     def test_auth_user(self):
-        header = headers.headers
+        header = test_headers.headers
         response = requests.get(get_orders, headers=header)
         assert 'success' in response.json()
 

@@ -1,5 +1,5 @@
 import requests
-from urls import create_user
+from test_urls import create_user
 from payloads.create_user_payload import create
 from payloads.create_user_payload import no_password
 import data_answers

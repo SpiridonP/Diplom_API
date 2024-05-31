@@ -1,9 +1,9 @@
 import allure
 import requests
-from urls import change_user
+from test_urls import change_user
 from payloads.change_user_payload import password_change
 from payloads.change_user_payload import email_change
-import headers
+import test_headers
 import data_answers
 
 
@@ -12,7 +12,7 @@ class TestChangeData:
     @allure.title('Изменение пароля')
     @allure.step('В теле запроса указать новый пароль и отправить запрос (в параметрах добавить авторизацию пользователя)')
     def test_change_password(self):
-        header = headers.headers
+        header = test_headers.headers
         payload = password_change
         response = requests.patch(change_user, data=payload, headers=header)
         assert response.status_code == 200
@@ -20,7 +20,7 @@ class TestChangeData:
     @allure.title('Изменение email')
     @allure.step('В теле запроса указать email и отправить запрос (в параметрах добавить авторизацию пользователя)')
     def test_change_email(self):
-        header = headers.headers
+        header = test_headers.headers
         payload = email_change
         response = requests.patch(change_user, data=payload, headers=header)
         assert response.status_code == 200
