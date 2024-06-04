@@ -1,1 +1,1 @@
-headers = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTk2ZDBjOWVkMjgwMDAxYjQyMDRiYSIsImlhdCI6MTcxNzEzNjY5MSwiZXhwIjoxNzE3MTM3ODkxfQ.vcoYk6hEmvKZxqAD-dL6m_r2yVkfDzEu2sVmSGqn2-s'}
+headers = {'Authorization': ''}
