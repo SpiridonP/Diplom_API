@@ -1,1 +1,1 @@
-headers = {'Authorization': ''}
+headers = {''}

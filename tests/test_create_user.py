@@ -13,7 +13,7 @@ class TestCreateUser:
     def test_first_create(self):
         payload = create
         response = requests.post(create_user, data=payload)
-        assert response.status_code == 200
+        assert response.status_code == 200 and "accessToken" in response.json()
 
     @allure.title('Создание пользователя с существующими данными')
     @allure.step('В теле запроса указать данные существующего пользователя')

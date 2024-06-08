@@ -15,7 +15,7 @@ class TestChangeData:
         header = test_headers.headers
         payload = password_change
         response = requests.patch(change_user, data=payload, headers=header)
-        assert response.status_code == 200
+        assert response.status_code == 200 and "success" in response.json()
 
     @allure.title('Изменение email')
     @allure.step('В теле запроса указать email и отправить запрос (в параметрах добавить авторизацию пользователя)')
@@ -23,7 +23,7 @@ class TestChangeData:
         header = test_headers.headers
         payload = email_change
         response = requests.patch(change_user, data=payload, headers=header)
-        assert response.status_code == 200
+        assert response.status_code == 200 and "success" in response.json()
 
     @allure.title('Изменение пароля')
     @allure.step('В теле запроса указать пароль и отправить запрос (в параметрах не добавлять авторизацию пользователя)')

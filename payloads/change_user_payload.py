@@ -1,9 +1,9 @@
 password_change = {
-"email": "22521232@yandex.ru",
-"password": "233421345",
+"email": "hy221s@yandex.ru",
+"password": "323421346",
 }
 
 email_change = {
-    "email": "hello321s@yandex.ru",
-    "password": "101124"
+    "email": "hh321s@yandex.ru",
+    "password": "423421346"
 }

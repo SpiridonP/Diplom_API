@@ -16,14 +16,14 @@ class TestCreateBurger:
         header = test_headers.headers
         payload = burger_1
         response = requests.post(create_burger, data=payload, headers=header)
-        assert response.status_code == 200
+        assert response.status_code == 200 and "name" in response.json()
 
     @allure.title('Создание заказа неавторизованным пользователем')
     @allure.step('В параметрах к запросу ничего не указывать и в теле запроса указать корректные данные')
     def test_create_order_without_auth(self):
         payload = burger_2
         response = requests.post(create_burger, data=payload)
-        assert response.status_code == 200
+        assert response.status_code == 200 and "name" in response.json()
 
     @allure.title('Заказ без ингредиентов')
     @allure.step('В параметрах к запросу авторизовать пользователя и в теле запроса не указать ингредиенты')
